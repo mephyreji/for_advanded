@@ -37,6 +37,28 @@ def fun(a,*b):
 fun(10,20,5,6,4)
 a=(1,2,3)
 print(type(a))
+#arbatiory key
+def fun(a,**b):
+    print(a)
+    print(b)
 
+fun(a=10,b=20,c=5,d=3)
+#normal arbatory(default)
+def fun(a,b=2):
+    print(a)
+    print(b)
 
+fun(10,)
 
+#scope=accessibility
+#two type:global scope and local variable
+a=10#gobal
+def fun():
+    global b
+    b=2
+    print(a)
+    print(a)
+print(a)
+print(b)
+fun(10,20,5,6,4)
+print(b)
